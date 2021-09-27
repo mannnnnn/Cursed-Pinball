@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ChimeraController : MonoBehaviour
 {
-    public Animator LFlipper;
-    public Animator RFlipper;
+    public GameObject LFlipper;
+    public GameObject RFlipper;
     public GameObject Ball;
     public Transform RespawnArea;
 
@@ -15,6 +15,7 @@ public class ChimeraController : MonoBehaviour
     public float launchSpeed = 1;
     public bool LFlipperContact = false;
     public bool RFlipperContact = false;
+    public float flipperVelocity = 1;
 
     public static ChimeraController GetInstance()
     {
@@ -30,24 +31,7 @@ public class ChimeraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool leftPressed = Input.GetKey(KeyCode.LeftArrow);
-        bool rightPressed = Input.GetKey(KeyCode.RightArrow);
-
-        bool leftHit = Input.GetKeyDown(KeyCode.LeftArrow);
-        bool rightHit = Input.GetKeyDown(KeyCode.RightArrow);
-
         bool superResetPressed = Input.GetKeyDown(KeyCode.R);
-        LFlipper.SetBool("FlipperHold", leftPressed);
-        RFlipper.SetBool("FlipperHold", rightPressed);
-
-        if(leftHit && LFlipperContact)
-        {
-            FlipperLaunchBall();
-        }
-        if (rightHit && RFlipperContact)
-        {
-            FlipperLaunchBall();
-        }
 
         if (superResetPressed)
         {
