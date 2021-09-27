@@ -30,8 +30,14 @@ public class ChimeraController : MonoBehaviour
     {
         bool leftPressed = Input.GetKey(KeyCode.LeftArrow);
         bool rightPressed = Input.GetKey(KeyCode.RightArrow);
+        bool superResetPressed = Input.GetKeyDown(KeyCode.R);
         LFlipper.SetBool("FlipperHold", leftPressed);
         RFlipper.SetBool("FlipperHold", rightPressed);
+        if (superResetPressed)
+        {
+            ResetBall();
+            LaunchBall();
+        }
     }
 
     public void ResetBall()

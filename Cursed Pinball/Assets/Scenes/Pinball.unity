@@ -297,6 +297,7 @@ GameObject:
   - component: {fileID: 485188979}
   - component: {fileID: 485188981}
   - component: {fileID: 485188980}
+  - component: {fileID: 485188982}
   m_Layer: 0
   m_Name: Flipper
   m_TagString: Untagged
@@ -327,7 +328,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 485188978}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a0fd0343a6f832c4ab3bad9d37298853, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -405,6 +406,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &485188982
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485188978}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &700484536
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,7 +591,7 @@ PolygonCollider2D:
     - - {x: -1.28, y: -2.8899999}
       - {x: -1.3199999, y: -2.85}
       - {x: -2.12, y: -2.85}
-      - {x: -2.5, y: -2.47}
+      - {x: -2.5458097, y: -2.4623652}
       - {x: -2.5, y: 2.6499999}
       - {x: -0.03, y: 2.6499999}
       - {x: -0.03, y: 2.55}
@@ -583,19 +605,19 @@ PolygonCollider2D:
       - {x: 0.08, y: 2.75}
       - {x: 0.11, y: 2.87}
       - {x: 0.12, y: 2.9199998}
-      - {x: 0.22999999, y: 3.1299999}
-      - {x: 0.32999998, y: 3.27}
-      - {x: 0.34, y: 3.27}
-      - {x: 0.37, y: 3.3}
-      - {x: 0.37, y: 3.31}
-      - {x: 0.42, y: 3.36}
-      - {x: 0.42999998, y: 3.36}
-      - {x: 0.48, y: 3.3999999}
-      - {x: 0.52, y: 3.4299998}
-      - {x: 0.58, y: 3.46}
-      - {x: 0.59999996, y: 3.48}
+      - {x: 0.18457146, y: 3.1390858}
+      - {x: 0.28457156, y: 3.2760572}
+      - {x: 0.32788578, y: 3.3154285}
+      - {x: 0.3488, y: 3.3333142}
+      - {x: 0.37302855, y: 3.3614855}
+      - {x: 0.4078857, y: 3.3842285}
+      - {x: 0.4390857, y: 3.4205713}
+      - {x: 0.48302856, y: 3.4545143}
+      - {x: 0.52908576, y: 3.4784565}
+      - {x: 0.58605707, y: 3.5175428}
+      - {x: 0.64239997, y: 3.5405717}
       - {x: 0.71, y: 3.54}
-      - {x: 0.72999996, y: 3.54}
+      - {x: 0.7360571, y: 3.5733137}
       - {x: 0.78, y: 3.56}
       - {x: 0.82, y: 3.58}
       - {x: 0.84999996, y: 3.58}
@@ -659,39 +681,50 @@ PolygonCollider2D:
       - {x: 1.24, y: 3.28}
       - {x: 1.23, y: 3.29}
       - {x: 1.04, y: 3.29}
-      - {x: 1.03, y: 3.28}
-      - {x: 0.96999997, y: 3.28}
-      - {x: 0.96, y: 3.27}
-      - {x: 0.89, y: 3.26}
-      - {x: 0.84, y: 3.24}
-      - {x: 0.77, y: 3.21}
-      - {x: 0.75, y: 3.1899998}
-      - {x: 0.69, y: 3.1599998}
-      - {x: 0.53999996, y: 3.01}
-      - {x: 0.53999996, y: 3}
-      - {x: 0.48999998, y: 2.95}
-      - {x: 0.47, y: 2.8999999}
-      - {x: 0.45, y: 2.87}
-      - {x: 0.45, y: 2.85}
-      - {x: 0.41, y: 2.77}
+      - {x: 1.057257, y: 3.2557716}
+      - {x: 1.0185716, y: 3.246319}
+      - {x: 0.9906804, y: 3.2398176}
+      - {x: 0.97719055, y: 3.2416275}
+      - {x: 0.97605705, y: 3.2466855}
+      - {x: 0.9569714, y: 3.2397144}
+      - {x: 0.88697135, y: 3.2206285}
+      - {x: 0.84, y: 3.1976001}
+      - {x: 0.79725707, y: 3.1766858}
+      - {x: 0.7257714, y: 3.1415427}
+      - {x: 0.65668577, y: 3.081257}
+      - {x: 0.56119996, y: 2.9797144}
+      - {x: 0.5309143, y: 2.930343}
+      - {x: 0.48999998, y: 2.8864002}
+      - {x: 0.5002856, y: 2.8666854}
+      - {x: 0.47759834, y: 2.8477974}
+      - {x: 0.4833143, y: 2.8457708}
+      - {x: 0.49542853, y: 2.821081}
+      - {x: 0.46626434, y: 2.796973}
+      - {x: 0.44394284, y: 2.7621717}
+      - {x: 0.43119994, y: 2.7245715}
+      - {x: 0.41491488, y: 2.6942334}
       - {x: 0.39999998, y: 2.69}
-      - {x: 0.39, y: 2.6799998}
-      - {x: 0.38, y: 2.6299999}
-      - {x: 0.38, y: 2.53}
+      - {x: 0.4112, y: 2.6799998}
+      - {x: 0.41331425, y: 2.6542282}
+      - {x: 0.40725714, y: 2.5845144}
+      - {x: 0.41232446, y: 2.543104}
       - {x: 0.41, y: 2.5}
       - {x: 0.42999998, y: 2.5}
       - {x: 0.45999998, y: 2.53}
       - {x: 0.47, y: 2.6499999}
       - {x: 1.4699999, y: 2.6499999}
-      - {x: 1.4699999, y: -2.47}
+      - {x: 1.5234445, y: -2.47}
+      - {x: 1.4830505, y: -2.5714743}
       - {x: 1.09, y: -2.85}
       - {x: 0.26, y: -2.85}
       - {x: 0.22999999, y: -2.8799999}
       - {x: 0.22, y: -2.9099998}
       - {x: 0.22, y: -3.51}
       - {x: -1.28, y: -3.51}
-    - - {x: -1.43, y: -2.3799999}
-      - {x: -1.6899999, y: -1.8299999}
+    - - {x: -1.6686246, y: -2.439656}
+      - {x: -1.7805716, y: -2.4460056}
+      - {x: -1.9535209, y: -2.1613266}
+      - {x: -1.7098852, y: -1.9095415}
       - {x: -2.05, y: -1.02}
       - {x: -2.1599998, y: -0.78}
       - {x: -2.1699998, y: -0.78}
@@ -703,7 +736,7 @@ PolygonCollider2D:
       - {x: -1.5699999, y: -2.6299999}
       - {x: -1.4699999, y: -2.62}
       - {x: -1.42, y: -2.56}
-      - {x: -1.42, y: -2.46}
+      - {x: -1.5492549, y: -2.529599}
     - - {x: 1.16, y: -2.35}
       - {x: 1.18, y: -2.1599998}
       - {x: 1.18, y: -1.15}
@@ -711,7 +744,11 @@ PolygonCollider2D:
       - {x: 1.17, y: -0.78}
       - {x: 1.13, y: -0.78}
       - {x: 1.01, y: -0.90999997}
-      - {x: 0.39, y: -2.4299998}
+      - {x: 0.67582875, y: -1.9345268}
+      - {x: 0.97847855, y: -2.2405152}
+      - {x: 0.90702015, y: -2.4001718}
+      - {x: 0.6882807, y: -2.4528713}
+      - {x: 0.54721713, y: -2.50776}
       - {x: 0.39, y: -2.54}
       - {x: 0.45999998, y: -2.6}
       - {x: 0.84, y: -2.6}
@@ -1831,6 +1868,7 @@ MonoBehaviour:
   RFlipper: {fileID: 974206807}
   Ball: {fileID: 1457456561}
   RespawnArea: {fileID: 1709534537}
+  launchSpeed: 10
 --- !u!4 &1327040376
 Transform:
   m_ObjectHideFlags: 0
@@ -1873,7 +1911,7 @@ Transform:
   m_GameObject: {fileID: 1457456561}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.371, y: 0.428, z: -3}
-  m_LocalScale: {x: -0.2, y: -0.2, z: 1}
+  m_LocalScale: {x: -0.14, y: -0.14, z: 1}
   m_Children: []
   m_Father: {fileID: 856088025}
   m_RootOrder: 1
@@ -1897,7 +1935,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!58 &1457456564
 CircleCollider2D:
@@ -2418,7 +2456,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709534536}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.694, y: -0.971, z: -2}
+  m_LocalPosition: {x: 0.696, y: -1.05, z: -2}
   m_LocalScale: {x: -0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 856088025}
@@ -2537,6 +2575,7 @@ GameObject:
   - component: {fileID: 2007053961}
   - component: {fileID: 2007053963}
   - component: {fileID: 2007053962}
+  - component: {fileID: 2007053964}
   m_Layer: 0
   m_Name: Flipper
   m_TagString: Untagged
@@ -2567,7 +2606,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 2007053960}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a0fd0343a6f832c4ab3bad9d37298853, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -2645,3 +2684,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &2007053964
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007053960}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
