@@ -13,23 +13,11 @@ public class Flipper : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        
     }
 
     void Update()
     {
-        if(transform.rotation.z >= angleUpperBound)
-        {
-            transform.rotation = new Quaternion(transform.rotation.x, transform.rotation.y, angleUpperBound, transform.rotation.w);
-            rb.angularVelocity = 0;
-            
-        }
-
-        if (transform.rotation.z <= angleLowerBound)
-        {
-            transform.rotation = new Quaternion(transform.rotation.x, transform.rotation.y, angleLowerBound, transform.rotation.w);
-            rb.angularVelocity = 0;
-        }
-
         bool keyPressed = Input.GetKey(key);
         bool keyHit = Input.GetKeyDown(key);
         bool keyRelease = Input.GetKeyUp(key);
@@ -43,6 +31,30 @@ public class Flipper : MonoBehaviour
         {
             FlipperRelease();
         }
+        UnityEngine.Debug.Log("It's probably a radian issue " + transform.rotation.z);
+
+        if (transform.rotation.z >= angleUpperBound)
+        {
+            transform.rotation = new Quaternion(transform.rotation.x, transform.rotation.y, angleUpperBound, transform.rotation.w);
+           if(rb.angularVelocity > 0)
+            {
+                rb.angularVelocity = 0;
+            }
+           
+            
+        }
+         else if (transform.rotation.z <= angleLowerBound)
+        {
+            transform.rotation = new Quaternion(transform.rotation.x, transform.rotation.y, angleLowerBound, transform.rotation.w);
+            if (rb.angularVelocity < 0)
+            {
+                rb.angularVelocity = 0;
+            }
+        }
+
+       
+
+        
     }
 
     public void FlipperHit()
