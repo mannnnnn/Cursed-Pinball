@@ -10,10 +10,11 @@ public class Flipper : MonoBehaviour
     public float angleUpperBound = 0;
     public bool reverseRotation = false;
     private Rigidbody2D rb;
+    private AudioSource audio;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
+        audio = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -21,6 +22,11 @@ public class Flipper : MonoBehaviour
         bool keyPressed = Input.GetKey(key);
         bool keyHit = Input.GetKeyDown(key);
         bool keyRelease = Input.GetKeyUp(key);
+
+        if (keyHit)
+        {
+            audio.Play();
+        }
 
         if (keyPressed)
         {
@@ -31,7 +37,7 @@ public class Flipper : MonoBehaviour
         {
             FlipperRelease();
         }
-        UnityEngine.Debug.Log("It's probably a radian issue " + transform.rotation.z);
+
 
         if (transform.rotation.z >= angleUpperBound)
         {
