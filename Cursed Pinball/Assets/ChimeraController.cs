@@ -15,7 +15,7 @@ public class ChimeraController : MonoBehaviour
     public float launchSpeed = 1;
     public bool LFlipperContact = false;
     public bool RFlipperContact = false;
-    public float flipperVelocity = 1;
+   
 
     public static ChimeraController GetInstance()
     {
@@ -25,6 +25,7 @@ public class ChimeraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       
         ballRB = Ball.GetComponent<Rigidbody2D>(); 
     }
 
@@ -38,6 +39,11 @@ public class ChimeraController : MonoBehaviour
             ResetBall();
             LaunchBall();
         }
+        bool jiggleBoard = Input.GetKeyDown(KeyCode.J);
+        if (jiggleBoard)
+        {
+            JiggleMachine();
+        }
     }
 
     public void ResetBall()
@@ -48,5 +54,20 @@ public class ChimeraController : MonoBehaviour
     public void LaunchBall()
     {
         ballRB.velocity = new Vector2(launchSpeed, 0);
+    }
+
+    public void JiggleMachine()
+    {
+        int randDir = Random.Range(-1, 1);
+        if(randDir >= 0)
+        {
+            ballRB.velocity = new Vector2(0.2f, 0);
+        } else
+        {
+            ballRB.velocity = new Vector2(-0.2f, 0);
+        }
+        Camera.main.GetComponent<Animator>().SetTrigger("jiggle");
+
+
     }
 }
