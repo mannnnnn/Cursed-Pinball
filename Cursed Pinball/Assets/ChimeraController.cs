@@ -61,10 +61,10 @@ public class ChimeraController : MonoBehaviour
         int randDir = Random.Range(-1, 1);
         if(randDir >= 0)
         {
-            ballRB.velocity = new Vector2(0.2f, 0);
+            ballRB.velocity = new Vector2(ballRB.velocity.x + 0.2f, ballRB.velocity.y);
         } else
         {
-            ballRB.velocity = new Vector2(-0.2f, 0);
+            ballRB.velocity = new Vector2(ballRB.velocity.x -0.2f, ballRB.velocity.y);
         }
         Camera.main.GetComponent<Animator>().SetTrigger("jiggle");
 
