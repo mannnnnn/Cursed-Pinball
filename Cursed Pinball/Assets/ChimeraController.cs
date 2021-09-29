@@ -47,11 +47,6 @@ public class ChimeraController : MonoBehaviour
 
     public void LaunchBall()
     {
-        ballRB.velocity += new Vector2(0, launchSpeed);
-    }
-
-    public void FlipperLaunchBall()
-    {
-        //ballRB.velocity += new Vector2(0, launchSpeed/2);
+        ballRB.velocity = new Vector2(launchSpeed, 0);
     }
 }
