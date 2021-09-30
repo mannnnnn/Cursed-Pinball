@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChimeraController : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class ChimeraController : MonoBehaviour
     public bool LFlipperContact = false;
     public bool RFlipperContact = false;
    
+    public int points = 0;
+    public Text pointsLabel;
 
     public static ChimeraController GetInstance()
     {
@@ -32,6 +35,9 @@ public class ChimeraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //i.ToString().PadLeft(4, '0')
+        pointsLabel.text = points.ToString("00000000");
+
         bool superResetPressed = Input.GetKeyDown(KeyCode.R);
 
         if (superResetPressed)

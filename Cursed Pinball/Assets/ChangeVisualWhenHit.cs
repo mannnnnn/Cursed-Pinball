@@ -16,8 +16,9 @@ public class ChangeVisualWhenHit : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
 
-    float hitTimer = 1f;
-   //this isn't quite working yet, but almost
+    float hitTimer = 0f;
+    float t = 0;
+    //this isn't quite working yet, but almost
 
     void Start()
     {
@@ -32,15 +33,18 @@ public class ChangeVisualWhenHit : MonoBehaviour
         if (collision.gameObject.tag == "Ball")
         {
             hitTimer = lerpTime*2;
+            t = 0;
         }
     }
 
     void Update()
     {
+       
         if (hitTimer > 0)
         {
+            t += Time.deltaTime / hitTimer * 2;
             hitTimer -= Time.time;
-            sprite.color = Color.Lerp(origColor, hitColor, Mathf.PingPong(Time.time, lerpTime));
+            sprite.color = Color.Lerp(origColor, hitColor, t);
         }
     }
 }
