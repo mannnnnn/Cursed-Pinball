@@ -19,6 +19,7 @@ public class ChimeraController : MonoBehaviour
    
     public int points = 0;
     public Text pointsLabel;
+    public int maxBallMagnitude = 50;
 
     public static ChimeraController GetInstance()
     {
