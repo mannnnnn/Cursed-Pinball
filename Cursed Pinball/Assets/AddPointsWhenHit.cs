@@ -17,7 +17,7 @@ public class AddPointsWhenHit : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ball")
         {
-            chimera.points += pointAmt;
+            chimera.AddPoints(ChimeraController.PointType.BUMPER, pointAmt);
         }
     }
 }

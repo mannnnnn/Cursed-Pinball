@@ -28,7 +28,6 @@ public class ChangeVelocityWhenHit : MonoBehaviour
         {
             Rigidbody2D oRB = collision.gameObject.GetComponent<Rigidbody2D>();
             Ball ball = collision.gameObject.GetComponent<Ball>();
-            UnityEngine.Debug.Log(ball);
             oRB.velocity = ball.lastConsistentVelocity * -1 * ballVelScale;
 
             if(oRB.velocity.magnitude == 0)
@@ -40,7 +39,6 @@ public class ChangeVelocityWhenHit : MonoBehaviour
             {
                 oRB.velocity = oRB.velocity * 1.1f;
             }
-            UnityEngine.Debug.Log(oRB.velocity + "new ");
         }
     }
 

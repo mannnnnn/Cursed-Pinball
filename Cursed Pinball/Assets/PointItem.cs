@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class PointItem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    
+    public void PointTypeAcquired()
     {
-        
+        GetComponent<Animator>().SetTrigger("Flash");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
