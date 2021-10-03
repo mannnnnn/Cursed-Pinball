@@ -13,7 +13,8 @@ public class ChimeraController : MonoBehaviour
     private Rigidbody2D ballRB;
 
     [Header("Settings To Fiddle With")]
-    public float launchSpeed = 1;
+    public float launchSpeedX = 1;
+    public float launchSpeedY = 1;
     public bool LFlipperContact = false;
     public bool RFlipperContact = false;
    
@@ -84,7 +85,7 @@ public class ChimeraController : MonoBehaviour
 
     public void LaunchBall()
     {
-        ballRB.velocity = new Vector2(launchSpeed, 0);
+        ballRB.velocity = new Vector2(launchSpeedX, launchSpeedY);
     }
 
     public void JiggleMachine()
